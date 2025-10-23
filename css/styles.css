@@ -1,29 +1,87 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+/* Le dice al navegador que descargue e importe un conjunto específico de fuentes tipográficas de Google Fonts: 
+Roboto Mono, Roboto Slab y Roboto, en varios grosores (400=normal, 500=medio, 700=negrita, 900=extra-negrita). */
 
-body {
-    font-family: 'Roboto Mono', monospace;
-    margin: 0;
-    padding: 0;
+/*-----------------------------------------------------------------------------------------------------------------
+Body y enlaces (a): Establece estilos globales para el cuerpo de la página y los enlaces.
+
+Body:Selecciona el cuerpo (contenido principal) de toda la página HTML.
+   front-family: Define la familia de fuentes para el texto en la página.
+   margin: Elimina el margen predeterminado alrededor del cuerpo de la página.
+   padding: Elimina el relleno (espacio interior) predeterminado dentro del cuerpo de la página.
+
+a: Selecciona todos los elementos de enlace (etiquetas <a>) en la página HTML.
+   text-decoration: Elimina el subrayado predeterminado de los enlaces.
+   display: Establece que los enlaces se comporten como elementos en línea, ocupando solo el espacio necesario para su contenido.
+   color: Establece el color del texto de los enlaces a negro.
+ *----------------------------------------------------------------------------------------------------------------*/
+
+body { 
+    font-family: 'Roboto Mono', monospace; 
+    margin: 0; 
+    padding: 0; 
     
 }
-a {
-    text-decoration: none;
-    display: inline;
-    color: black;
+a { 
+    text-decoration: none; 
+    display: inline; 
+    color: black; 
 }
-.home-body {
-    position: fixed;
-    top: 0;
+
+
+/*-----------------------------------------------------------------------------------------------------------------
+home-body y grid-container: Estas clases están diseñadas para controlar el diseño y la estructura principal de la página de inicio.
+
+home-body: Selecciona un elemento con la clase home-body (probablemente el contenedor principal de la página de inicio).
+   positoin
+      fixed: Fija la posición del elemento, de modo que permanece estático incluso si el usuario se desplaza (scroll)
+      Estas 4 líneas hacen que el elemento ocupe el 100% del ancho y alto visible de la pantalla, anclándose a los bordes.
+
+grid-container: Selecciona un elemento con la clase grid-container.
+   max-width: Establece un ancho máximo de 980 píxeles para el contenedor, evitando que se expanda demasiado en pantallas grandes.
+   margin: Centra el contenedor horizontalmente dentro de su elemento padre, aplicando márgenes automáticos a los lados(cuando el ancho es menor a la pantalla).
+ *----------------------------------------------------------------------------------------------------------------*/
+
+.home-body { 
+    position: fixed; 
+    top: 0; 
     bottom: 0;
     left: 0;
     right: 0;
 }
-.grid-container {
+.grid-container { 
     max-width: 980px;
     margin: auto;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------
+Header y navegación: Define el diseño y los estilos para el encabezado y la barra de navegación de la página.
 
+header:    Selecciona el elemento de encabezado (header) de la página.
+   width: Establece el ancho del encabezado al 100% del contenedor padre.
+   height: Define una altura fija de 140 píxeles para el encabezado.
+   display: Configura el encabezado como un contenedor de cuadrícula (grid).
+   grid-template-rows: Divide el encabezado en dos filas iguales.
+
+header .header-icons-container:    Selecciona un contenedor dentro del encabezado para los iconos.
+   width: Establece el ancho al 100% del contenedor padre.
+   height: Define una altura fija de 50 píxeles.
+   display: Configura el contenedor como una cuadrícula (grid).
+   background-color: Asigna un color de fondo específico (#47cfac) al contenedor de iconos del encabezado.
+
+header .header-icons-container .icons:   Selecciona un contenedor específico para los iconos dentro del contenedor de iconos del encabezado.
+   width: Establece un ancho fijo de 300 píxeles.
+   height: Define la altura como automática (ajustándose al contenido).
+   display: Configura el contenedor como un contenedor flexible (flex).
+   justify-items: Alinea los elementos hijos al final del contenedor.
+   align-items: Centra verticalmente los elementos hijos dentro del contenedor.
+   justify-content: Distribuye el espacio entre los elementos hijos de manera uniforme.
+   justify-self: Alinea el contenedor de iconos al final del contenedor padre.
+   margin-right: Aplica un margen derecho de 50 píxeles.
+
+header .icons span: Selecciona los elementos de texto (span) dentro del contenedor de iconos del encabezado.
+   color: Establece el color del texto a blanco.
+ *----------------------------------------------------------------------------------------------------------------*/
 header {
     width: 100%;
     height: 140px;
@@ -49,6 +107,28 @@ header .header-icons-container .icons {
 header .icons span {
     color: white;
 }
+/*-----------------------------------------------------------------------------------------------------------------
+nav:    Selecciona el elemento de navegación (nav) de la página.
+   display: Configura la navegación como una cuadrícula (grid).
+   grid-template-columns: Divide la navegación en dos columnas iguales.
+   height: Define una altura fija de 90 píxeles.
+
+nav .nav-logo-container:     Selecciona un contenedor específico para el logo dentro de la navegación.
+   margin-left: Aplica un margen izquierdo de 50 píxeles.
+
+nav .nav-logo-container img:    Selecciona la imagen del logo dentro del contenedor del logo.
+   width: Establece un ancho fijo de 220 píxeles.
+   margin-top: Aplica un margen superior de 10 píxeles.
+
+nav .profile-link:     Selecciona un contenedor específico para el enlace de perfil dentro de la navegación.
+   display: Configura el contenedor como un contenedor flexible (flex).
+   align-items: Centra verticalmente los elementos hijos dentro del contenedor.
+   justify-content: Alinea los elementos hijos al final del contenedor.
+   margin-right: Aplica un margen derecho de 50 píxeles.
+
+nav .profile-link a:     Selecciona el enlace dentro del contenedor de perfil.
+   color: Establece el color del texto a negro.
+*----------------------------------------------------------------------------------------------------------------*/
 nav  {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -72,9 +152,46 @@ nav .profile-link a {
     border-bottom: 1px solid black;
 }
 
+
+/*-----------------------------------------------------------------------------------------------------------------
+home-main: Esta sección define el diseño central de tu página de inicio, a menudo un área destacada (hero section).
+
+home-main: Selecciona la sección principal de la página de inicio.
+   display: Configura la sección principal como una cuadrícula (grid). 
+   grid-template-columns: Tres columnas: una a la izquierda, una central más ancha y una a la derecha
+   height: Establece la altura al 100% del contenedor padre.
+   background-image: Define una imagen de fondo para la sección principal, especificando la ruta del archivo de imagen.
+   background-position: Centra la imagen de fondo dentro del contenedor.
+   background-repeat: Evita que la imagen de fondo se repita.
+   background-size: Ajusta la imagen de fondo para cubrir todo el contenedor, manteniendo sus proporciones.
+
+home-main section: Selecciona una sección específica dentro de la sección principal de la página de inicio.
+   display: Configura esta sección como una cuadrícula (grid).
+   grid-column: Coloca esta sección en la segunda columna de la cuadrícula principal.
+   justify-items: Centra los elementos hijos horizontalmente dentro de esta sección.
+   height: Define una altura fija de 350 píxeles.
+   margin-top: Aplica un margen superior de 80 píxeles.
+
+home-main-text: Selecciona un elemento con la clase home-main-text dentro de la sección principal.
+   font-family: Define la familia de fuentes para el texto.
+   font-size: Establece el tamaño de la fuente a 30 píxeles.
+   font-weight: Define el grosor de la fuente a 700 (negrita).
+   letter-spacing: Aplica un espaciado de 10 píxeles entre las letras.
+   color: Establece el color del texto a blanco.
+   text-align: Centra el texto horizontalmente dentro del contenedor.
+
+home-main-button: Selecciona un elemento con la clase home-main-button dentro de la sección principal.
+   width: Establece un ancho fijo de 110 píxeles.
+   height: Define una altura fija de 50 píxeles.
+   background: Asigna un color de fondo específico (#48cfad) al botón.
+   text-align: Centra el texto horizontalmente dentro del botón.
+   font-weight: Define el grosor de la fuente a 700 (negrita).
+   font-size: Establece el tamaño de la fuente a 18 píxeles.
+   line-height: Ajusta la altura de la línea a 50 píxeles, alineando el texto verticalmente dentro del botón.
+*----------------------------------------------------------------------------------------------------------------*/
 .home-main {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    display: grid; 
+    grid-template-columns: 1fr 4fr 1fr; 
     height: 100%;
     background-image: url('../assets/img/Cover.png');
     background-position: center;
@@ -106,7 +223,58 @@ nav .profile-link a {
     font-size: 18px;
     line-height: 50px;
 }
+/*-----------------------------------------------------------------------------------------------------------------
+blogs-main y secciones de blogs: Define el diseño y los estilos para la sección de blogs de la página.
 
+blogs-main: Selecciona la sección principal de la página de blogs.
+   display: Configura la sección principal como una cuadrícula (grid).
+
+blogs-news-container: Selecciona un contenedor específico para las noticias dentro de la sección de blogs.
+   background-color: Asigna un color de fondo específico (#e6e9ed) al contenedor de noticias.
+   padding: Aplica un relleno de 0 píxeles en la parte superior, 50 píxeles a los lados y 40 píxeles en la parte inferior.
+
+blogs-main-new: Selecciona una sección específica para las noticias principales dentro de la sección de blogs.
+   display: Configura esta sección como una cuadrícula (grid).
+   grid-template-columns: Divide la sección en dos columnas, la primera ocupando el doble de espacio que la segunda.
+   grid-template-rows: Define una sola fila que ocupa todo el espacio disponible.
+
+blogs-news-img-container: Selecciona un contenedor específico para la imagen de noticias dentro de la sección de noticias principales.
+   grid-column: Coloca este contenedor en la primera columna de la cuadrícula de noticias principales.
+
+blogs-news-img-container img: Selecciona la imagen dentro del contenedor de imágenes de noticias.
+   width: Establece el ancho de la imagen al 85% del contenedor padre.
+
+blogs-news-info-container: Selecciona un contenedor específico para la información de noticias dentro de la sección de noticias principales.
+   grid-column: Coloca este contenedor en la segunda columna de la cuadrícula de noticias principales.
+
+blogs-news-info-container p: Selecciona los párrafos dentro del contenedor de información de noticias.
+   margin-bottom: Aplica un margen inferior de 35 píxeles a los párrafos.
+
+blogs-posts-container: Selecciona un contenedor específico para las publicaciones dentro de la sección de blogs.
+   padding: Aplica un relleno de 0 píxeles en la parte superior, 50 píxeles a los lados y 40 píxeles en la parte inferior.
+
+blogs-posts-container h3: Selecciona los encabezados de nivel 3 dentro del contenedor de publicaciones.
+   border-bottom: Agrega una línea inferior de 1 píxel de grosor y color #cdd2da.
+   padding-bottom: Aplica un relleno inferior de 20 píxeles.
+   text-align: Centra el texto horizontalmente dentro del encabezado.
+
+blogs-button: Selecciona un elemento con la clase blogs-button.
+   border: Agrega un borde de 1 píxel de grosor y color #48cfad.
+   padding: Aplica un relleno de 10 píxeles en la parte superior e inferior, y 15 píxeles a los lados.
+   font-size: Establece el tamaño de la fuente a 12 píxeles.
+
+blogs-posts-container .post-container: Selecciona los contenedores de publicaciones dentro del contenedor de publicaciones.
+   display: Configura cada contenedor de publicaciones como un elemento en línea (inline-block).
+   padding-left: Aplica un relleno izquierdo de 10 píxeles.
+   max-width: Limita el ancho máximo de cada contenedor de publicaciones al 30% del contenedor padre.
+   margin-bottom: Aplica un margen inferior de 50 píxeles.
+
+blogs-posts-container .post-container p: Selecciona los párrafos dentro de cada contenedor de publicaciones.
+   margin-bottom: Aplica un margen inferior de 35 píxeles a los párrafos.
+   
+blogs-posts-container .post-container img: Selecciona las imágenes dentro de cada contenedor de publicaciones.
+   width: Establece el ancho de las imágenes al 100% del contenedor padre.
+*----------------------------------------------------------------------------------------------------------------*/
 .blogs-main {
     display: grid;
 }
@@ -161,6 +329,20 @@ nav .profile-link a {
    width: 100%;
 }
 
+
+/*-----------------------------------------------------------------------------------------------------------------
+footer y texto del pie de página: Define el diseño y los estilos para el pie de página de la página.
+
+footer:    Selecciona el elemento de pie de página (footer) de la página.
+   width: Establece el ancho del pie de página al 100% del contenedor padre.
+   height: Define una altura fija de 80 píxeles.
+   background-color: Asigna un color de fondo específico (#22272d) al pie de página.
+   border-top: Agrega un borde superior de 35 píxeles de grosor y color #47cfac.
+   text-align: Centra el texto horizontalmente dentro del pie de página.
+
+footer p:     Selecciona los párrafos dentro del pie de página.
+   color: Establece el color del texto a blanco.
+*----------------------------------------------------------------------------------------------------------------*/
 footer {
    width: 100%;
    height: 80px;
