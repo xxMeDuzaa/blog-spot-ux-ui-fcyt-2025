@@ -6,18 +6,17 @@
  <!-- -->
 <!DOCTYPE html>
 <html lang="es">
-
-<head>   <!-- CONFIGURACION -->
-    <meta charset="UTF-8">  
+<head>               
+<!-- Configura la página para ser responsiva y carga dos archivos CSS: uno para el diseño general (styles.css con Grid/Flexbox) y otro para los íconos de redes sociales (flaticon.css).-->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog - Mundo Tech</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/font/flaticon.css">
+    <title>blogs</title>
 </head>
-
-<body>
-    <header>
-        <section class="header-icons-container"> <!-- La barra superior que contiene los íconos sociales.  -->
+<body>           <!-- Estructura principal de la página con un encabezado, un área principal para noticias y blogposts, y un pie de página. -->
+    <header>    <!--Contiene la cabecera del sitio en dos filas: 1. Una barra superior con íconos de redes sociales (Facebook, Twitter, Instagram, LinkedIn, YouTube) que son enlaces.-->
+        <section class="header-icons-container">
             <div class="icons">
                 <a href="/"><span class="flaticon-001-facebook"></span></a>
                 <a href="/"><span class="flaticon-002-twitter"></span></a>
@@ -27,6 +26,77 @@
             </div>
         </section>
 
-        <nav> <!-- Barra de navegación principal -->
-            <section class="nav-logo-container">
-                <a href="/"><img src="/assets/img/Logo-negro.png" alt="Logo de mi blog principal"></a> 
+        <nav>
+            <section class="nav-logo-container">                      <!--2. La barra de navegación principal, que incluye el logo y un enlace "Sobre mi". -->
+                <a href="/"><img src="/assets/img/Logo-negro.png" alt="Logo de mi blog principal"></a>
+            </section>
+
+            <section class="profile-link">
+                <a href="/perfil.html">Sobre mi</a>
+            </section>
+        </nav>
+    </header>
+
+       
+    <main class="blogs-main">                                           
+        <section class="blogs-news-container">                          
+            <div class="grid-container blogs-main-new">                                                       
+                <div class="blogs-news-img-container">
+                    <img src="/assets/img/profile-pic.jpg" alt="">
+                </div>
+                <div class="blogs-news-info-container">                  
+                    <h2>Hola!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                </div>
+            </div>
+        </section>
+        <!-- 
+        <section class="profile-projects">
+            <h1>Proyectos</h>
+            
+            <div class="grid-container projects-main-container">
+                
+                <article class="project-container">
+                    <h3>Texto</h3>
+                    <p>texto2
+                    </p>
+                </article>
+
+                <article class="project-container">
+                    <h3>Texto</h3>
+                    <p>testo3
+                    </p>
+                </article>
+
+                <article class="project-container">
+                    <h3>Texto</h3>
+                    <p>texto4
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-main-container">
+            <div class="grid-container contact-container">
+                
+                <article class="contact-card">
+                    <img src="/assets/img/icono-mail.png" alt="Icono de Correo"> 
+                    <h3>Contacto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+
+                <article class="contact-card">
+                    <img src="/assets/img/icono-corazon.png" alt="Icono de Corazón"> 
+                    <h3>Escribe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+-->
+ <footer>    <!-- Contiene el pie de página, usado para información de contacto o derechos de autor. -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    </footer>
+
+</body>
+</html>
