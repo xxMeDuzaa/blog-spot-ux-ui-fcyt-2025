@@ -1,20 +1,21 @@
 <!--
-    Descripción: Página principal de blogs con lista de blogposts y noticias.
+    Descripción: Página de inicio principal del blog con enlaces a blogs y noticias.
  -->
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+
+<head>   <!-- CONFIGURACION -->
+    <meta charset="UTF-8">  <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Blog - Mundo Tech</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/font/flaticon.css">
 </head>
+
 <body>
-  
     <header>
-        <section class="header-icons-container">
+        <section class="header-icons-container"> <!-- La barra superior que contiene los íconos sociales.  -->
             <div class="icons">
                 <a href="/"><span class="flaticon-001-facebook"></span></a>
                 <a href="/"><span class="flaticon-002-twitter"></span></a>
@@ -24,7 +25,7 @@
             </div>
         </section>
 
-        <nav>
+        <nav> <!-- Barra de navegación principal -->
             <section class="nav-logo-container">
                 <a href="/"><img src="/assets/img/Logo-negro.png" alt="Logo de mi blog principal"></a>
             </section>
@@ -35,10 +36,14 @@
         </nav>
     </header>
 
-    <main class="home-main">
-        <section>
+    <main class="home-main">                                            <!-- Contenedor principal del contenido. La clase home-main es clave, ya que en el CSS debe definir el fondo,--> 
+        <section>                                                   <!--la altura completa (height: 100vh o similar) y la alineación central (probablemente con Flexbox) del contenido.-->
             <h1 class="home-main-text">Conoce las novedades y <br>noticias del Mundo Tech</h1>
-                <a class="home-main-button" href="blogs.html">Entre ya!</a>
+            <!-- El título principal de la página de inicio. Usa un salto de línea (<br>) para forzar que el texto quede en dos líneas. 
+             La clase aplica el estilo grande y llamativo (color, tamaño). -->
+                <a class="home-main-button" href="blogs.html">Entre ya!</a> 
+                <!-- El botón principal (Llamada a la Acción o CTA). Enlaza directamente a la página de listado de blogs (blogs.html), invitando al usuario a entrar al contenido. 
+                 La clase define su apariencia (fondo de color, bordes, tipografía). -->
         </section>
     </main>
 </body>
